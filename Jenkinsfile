@@ -7,7 +7,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('Haneen-aws-secret-access-key')
 
         AWS_S3_BUCKET = "haneen-belt2d2-artifacts-12345" 
-        ARTIFACT_NAME = "hello-world.war" 
+        ARTIFACT_NAME = "hello-world.jar" 
         AWS_EB_APP_NAME = "haneen-belt2" 
         AWS_EB_APP_VERSION = "${BUILD_ID}" 
         AWS_EB_ENVIRONMENT = "Haneenbelt2-env" 
