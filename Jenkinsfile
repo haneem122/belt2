@@ -73,7 +73,7 @@ pipeline {
 
             post {
                 success {
-                    archiveArtifacts artifacts: '**/target/**.war', followSymlinks: false
+                    archiveArtifacts artifacts: '**/target/**.jar', followSymlinks: false
 
                    
                 }
@@ -85,7 +85,7 @@ pipeline {
 
                 sh "aws configure set region us-east-1"
 
-                sh "aws s3 cp ./target/**.war s3://$AWS_S3_BUCKET/$ARTIFACT_NAME"
+                sh "aws s3 cp ./target/**.jar s3://$AWS_S3_BUCKET/$ARTIFACT_NAME"
                 
             }
         }
